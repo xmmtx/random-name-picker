@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-
+<html lang="zh-CN">
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width" />
-  <title>Random Name Picker</title>
-
+  <title>随机姓名抽取</title>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="shortcut icon" href="https://www.xm233.cn/upload/Favicon.ico" type="image/x-icon">
   <script src="js/vendor/custom.modernizr.js"></script>
   <script src="js/jquery-latest.min.js"></script>
 
@@ -31,10 +29,10 @@ body { background:#F1C40F url(img/bg-noise-orange.png); }
 	<div class="row">
 		<div class="large-12 columns" style="padding-top:50px;background:#111 url(img/header-bg.png) repeat-x center top;z-index:20;">
 		<ul class="button-group even-4">
-      <li><a href="index.html" class="alert button" id="reset">Reset</a></li>
-			<li><button class="button" id="list" onclick="namelist();">Name List</button></li>
-			<li><button class="button" id="save" onclick="save();">Save &amp; Update</button></li>
-			<li><button class="success button" id="go" onclick="go();">GO!</button></li>
+      <li><a href="/" class="alert button" id="reset">重置</a></li>
+			<li><button class="button" id="list" onclick="namelist();">姓名列表</button></li>
+			<li><button class="button" id="save" onclick="save();">保存 &amp; 更新</button></li>
+			<li><button class="success button" id="go" onclick="go();">开始抽取！</button></li>
     </ul>
 		</div>
 	</div>
@@ -42,9 +40,10 @@ body { background:#F1C40F url(img/bg-noise-orange.png); }
 
 	<div class="row">
 		<div class="large-12 columns">
-			<h3 style="text-align:center;margin-top:30px;" id="headline">Let's see who is The Lucky One?</h3>
+			<h3 style="text-align:center;margin-top:30px;" id="headline">让我们看看谁是幸运儿！</h3>
 			
-			<div id="varnote"><img src="img/logo.png"><div class="copyright">&copy; Coded by <strong>Heiswayi Nrird</strong>, June 2013</div></div>
+			<div id="varnote"><img src="img/logo.png"><div class="copyright">&copy; 代码来自 <strong>Heiswayi Nrird</strong>, 2013年6月</div>
+			<div class="copyright">汉化来自 <strong>枫沐</strong>, 2024年12月</div></div>
 			
       <div id="popdown">
       <div id="names" class="inbox"><textarea name="namesbox" id="namesbox"></textarea></div>
@@ -67,79 +66,23 @@ body { background:#F1C40F url(img/bg-noise-orange.png); }
   
 <script>
 var text;
-var names = new Array('Barbara McFell',
-                      'Tempo McKeteketly',
-                      'Maonga Irpaae',
-                      'Jose Tunisia',
-                      'Bob Bobson',
-                      'Harold Greenoff',
-                      'Jeff Penn',
-                      'Ewan Freedom',
-                      'Benjamin Turkin',
-                      'Robert Harper',
-                      'Sally Cladwell',
-                      'Gregory Tomson',
-                      'Benita Dano',
-                      'Tameka Chea',
-                      'Fernando Guntrum',
-                      'Cody Devita',
-                      'Margery Moloney',
-                      'Jessie Wagar',
-                      'Jessie Burkhard',
-                      'Cody Lamotte',
-                      'Tabatha Cantley',
-                      'Hugh Fullwood',
-                      'Emilia Janusz',
-                      'Erik Taketa',
-                      'Lenore Laughter',
-                      'Kathrine Palazzo',
-                      'Lonnie Garron',
-                      'Tyrone Shott',
-                      'Gay Duble',
-                      'Pearlie Newberg',
-                      'Clinton Rayl',
-                      'Louisa Strey',
-                      'Saundra Ingenito',
-                      'Fernando Jenkin',
-                      'Maricela Tonkin',
-                      'Allie Borjas',
-                      'Clinton Rickenbacker',
-                      'Cody Golay',
-                      'Jerri Tienda',
-                      'Nita Pippen',
-                      'Alejandra Bonhomme',
-                      'Nelson Eguia',
-                      'Rae Velasques',
-                      'Boyce Edeker',
-                      'Cedrick Culotti',
-                      'Elenora Nagindas',
-                      'Arletta Miran',
-                      'Alica Knudsvig',
-                      'Von Ostroot',
-                      'Tomika Nuesca',
-                      'Felton Pattinson',
-                      'Cristopher Laper',
-                      'Shonna Parrotta',
-                      'Sarina Macurdy',
-                      'Waylon Companie',
-                      'Shon Carratura',
-                      'Jae Kneser',
-                      'Janett Papiernik',
-                      'Lynwood Bellar',
-                      'Jeramy Contopoulos',
-                      'Hong Nederostek',
-                      'Gigi Mccarn',
-                      'Sid Mursko',
-                      'Bielser',
-                      'Jospeh Lustberg',
-                      'Spring Luckinbill',
-                      'Ciera Chionchio',
-                      'Marleen Litchard',
-                      'Eldridge Brynga',
-                      'Leif Dinho',
-                      'Gigi Kornblatt',
-                      'Idell Chagollan',
-                      'Michale Mcclod'
+var names = new Array('白一诺 Yino',
+                      '傅晴朗 Lancelot',
+                      '金祉言 Becky',
+                      '厉昱成 Lewis',
+                      '林一 Lip',
+                      '刘炫成 Shane',
+                      '骆依亿 Yiyi',
+                      '麻秉睿 Nash',
+                      '马恬 Rahma',
+                      '沈锴迪 Max',
+                      '施煜宸 Vincent',
+                      '宋文博 Ryan',
+                    //   'Wang, Liangyi (Sisi) | 王亮仪',
+                      '王逍遥 Wren',
+                      '汪奕辰 Ethan',
+                      '徐嘉炜 Wayne',
+                      '张雯诺 Wrenlee'
                       );
 
 function reset(){
@@ -152,79 +95,23 @@ function reset(){
     namesbreak = namesbreak.replace(/%20/g,' ');          
     }
     else   {
-      var names = new Array('Barbara McFell',
-                      'Tempo McKeteketly',
-                      'Maonga Irpaae',
-                      'Jose Tunisia',
-                      'Bob Bobson',
-                      'Harold Greenoff',
-                      'Jeff Penn',
-                      'Ewan Freedom',
-                      'Benjamin Turkin',
-                      'Robert Harper',
-                      'Sally Cladwell',
-                      'Gregory Tomson',
-                      'Benita Dano',
-                      'Tameka Chea',
-                      'Fernando Guntrum',
-                      'Cody Devita',
-                      'Margery Moloney',
-                      'Jessie Wagar',
-                      'Jessie Burkhard',
-                      'Cody Lamotte',
-                      'Tabatha Cantley',
-                      'Hugh Fullwood',
-                      'Emilia Janusz',
-                      'Erik Taketa',
-                      'Lenore Laughter',
-                      'Kathrine Palazzo',
-                      'Lonnie Garron',
-                      'Tyrone Shott',
-                      'Gay Duble',
-                      'Pearlie Newberg',
-                      'Clinton Rayl',
-                      'Louisa Strey',
-                      'Saundra Ingenito',
-                      'Fernando Jenkin',
-                      'Maricela Tonkin',
-                      'Allie Borjas',
-                      'Clinton Rickenbacker',
-                      'Cody Golay',
-                      'Jerri Tienda',
-                      'Nita Pippen',
-                      'Alejandra Bonhomme',
-                      'Nelson Eguia',
-                      'Rae Velasques',
-                      'Boyce Edeker',
-                      'Cedrick Culotti',
-                      'Elenora Nagindas',
-                      'Arletta Miran',
-                      'Alica Knudsvig',
-                      'Von Ostroot',
-                      'Tomika Nuesca',
-                      'Felton Pattinson',
-                      'Cristopher Laper',
-                      'Shonna Parrotta',
-                      'Sarina Macurdy',
-                      'Waylon Companie',
-                      'Shon Carratura',
-                      'Jae Kneser',
-                      'Janett Papiernik',
-                      'Lynwood Bellar',
-                      'Jeramy Contopoulos',
-                      'Hong Nederostek',
-                      'Gigi Mccarn',
-                      'Sid Mursko',
-                      'Bielser',
-                      'Jospeh Lustberg',
-                      'Spring Luckinbill',
-                      'Ciera Chionchio',
-                      'Marleen Litchard',
-                      'Eldridge Brynga',
-                      'Leif Dinho',
-                      'Gigi Kornblatt',
-                      'Idell Chagollan',
-                      'Michale Mcclod'
+      var names = new Array('白一诺 Yino',
+                      '傅晴朗 Lancelot',
+                      '金祉言 Becky',
+                      '厉昱成 Lewis',
+                      '林一 Lip',
+                      '刘炫成 Shane',
+                      '骆依亿 Yiyi',
+                      '麻秉睿 Nash',
+                      '马恬 Rahma',
+                      '沈锴迪 Max',
+                      '施煜宸 Vincent',
+                      '宋文博 Ryan',
+                    //   'Wang, Liangyi (Sisi) | 王亮仪',
+                      '王逍遥 Wren',
+                      '汪奕辰 Ethan',
+                      '徐嘉炜 Wayne',
+                      '张雯诺 Wrenlee'
                       );
     for(var i in names){
       name = names[i];
@@ -260,7 +147,7 @@ function save(){
         savenames = $("#namesbox").val();
         savenames = savenames.replace(/\n\r?/g, '101');
         $('#headline').fadeOut();
-        $('#headline').text('The name list is saved and updated.').fadeIn();
+        $('#headline').text('姓名列表已更新并保存').fadeIn();
         $("#names").show();
         $('#namesbox').attr('disabled','disabled');
 }
@@ -268,7 +155,7 @@ function save(){
 function namelist(){
         $("#varnote").hide();
         $('#namesbox').removeAttr('disabled','disabled');
-        $('#headline').text('Configure name list');
+        $('#headline').text('配置姓名列表');
         $("#popdown").show();
         $("#values").hide();
         $("#names").show();
@@ -346,35 +233,35 @@ function standout(text){
         $('#result1').removeClass('name');
         $('.name').animate({opacity: .25});
         $('#result1').animate({height: '+=60px'});
-        $('#result1').append('<div class="extra"><a class="small alert button" href="#" onClick="removevictim();">Remove name from list</a></div>');
+        $('#result1').append('<div class="extra"><a class="small alert button" href="#" onClick="removevictim();">在姓名列表中移除该姓名</a></div>');
         $('#go').removeAttr('disabled','disabled');
         $('#list').removeAttr('disabled','disabled');
         $('#save').removeAttr('disabled','disabled');
-        $('#headline').text('Found the Winner!');
+        $('#headline').text('恭喜幸运儿！');
         $('#headline').slideDown();
 }
 
 function removevictim(){
-	// Removing victim from array and UI
-	// names = names.filter(function(){ return true});
-	// Rewriting namesbox contents
-	var nameupdated = "";
-	for(var i in names){
-		name = names[i];
-                if (name == "" || name == text || typeof(name) == undefined){}else{
-			nameupdated = nameupdated + "\n" + name;
-		}
-	}
-	$('#namesbox').val("");
-  $('#namesbox').val(nameupdated);
-  $('#result1').html("Removed");
-  $('#result1').fadeOut(1000, function(){
-    $("div").remove("#result1");
-  });
-  $("div").remove(".name");
-  $("div").remove(".extra");
-  $('#headline').text('OK, done! Let\'s see who is next? Just click "GO!" button for next roll.');
+    // Directly removing victim from names array
+    names = names.filter(function(name) {
+        return name !== text; // Remove the name that matches 'text'
+    });
+
+    // Update the namesbox with the updated list
+    var nameupdated = names.join("\n");
+    $('#namesbox').val(nameupdated);
+    
+    $('#result1').html("已移除");
+    $('#result1').fadeOut(1000, function(){
+        $("div").remove("#result1");
+    });
+    
+    $("div").remove(".name");
+    $("div").remove(".extra");
+    $('#headline').text('OK，完成了！看看谁是下一个？只需点击“开始抽取！”按钮，即可开始下一轮。');
 }
+
+
 
 </script>
 
